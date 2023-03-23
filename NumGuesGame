@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 22 18:47:43 2023
+
+@author: tjorven
+"""
+
+print ("Such dir eine Zahl zwischen 1 und 100")
+
+print("Wenn die zahl die ich gesagt habe größer als deine zahl sein schreibe 1")
+print("Wenn die zahl die ich gesagt habe klein als deine zahl sein schreibe -1")
+print("Wenn die zahl die ich gesagt habe  deine zahl ist schreibe 0")
+
+def my_function(l,h):
+  avr = (l+h)//2
+  print(avr)
+  x = int(input())
+  if x== 0:
+      print("Deine Zahl ist "+ str(avr))
+      return 
+  elif x <0:
+      my_function(l,avr)
+  elif x >0:
+      my_function(avr,h)
+
+my_function(0,100)
